@@ -1,0 +1,27 @@
+import java.util.*;
+public class days{
+    public static void main(String[] args){
+        try{
+
+            System.out.println("enter no of days: ");
+            Scanner sc=new Scanner(System.in);
+            int days=sc.nextInt();
+            if(days<=0) {
+                throw new ArithmeticException("invalid due to negative number");
+            }
+                int years=days/365;
+                int y1=days%365;
+                int weeks=y1/7;
+                int d=y1%7;
+                System.out.println("years"+years);
+                System.out.println("weeks"+weeks);
+                System.out.println("days"+d);
+            }
+            catch (ArithmeticException e) {
+                System.out.println("invalid due to negative value");
+            }
+            catch (Exception e){
+            System.out.println("invalid due to float value");
+        }
+    }
+}

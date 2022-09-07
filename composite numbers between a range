@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class compositenumbers {
+    public static void main(String[] args) {
+        try {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("enter range of A: ");
+            int A = sc.nextInt();
+            System.out.println("enter range of B: ");
+            int B = sc.nextInt();
+            if (A == B) {
+                throw new NullPointerException("cant find as both are equal");
+            }
+            if (A > B) {
+                throw new ArithmeticException("cant find as A is larger than B");
+            }
+            for (int i = A + 1; i < B; i++) {
+                int count = 0;
+                for (int j = 1; j <= i; j++) {
+                    if (i % j == 0) {
+                        count = count + 1;
+                    }
+                }
+                if (count > 2) {
+                    System.out.println(i);
+                }
+
+            }
+
+        }
+        catch (NullPointerException e){
+            System.out.println("cant find as both are equal");
+        }
+        catch(ArithmeticException e){
+            System.out.println("cant find as A is larger than B");
+        }
+    }
+}

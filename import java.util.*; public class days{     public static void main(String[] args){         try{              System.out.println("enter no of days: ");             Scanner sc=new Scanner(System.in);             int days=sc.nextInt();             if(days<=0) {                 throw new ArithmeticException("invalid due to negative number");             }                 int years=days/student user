@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class studentuser {
+    public static void main(String[] args){
+        try {
+            Scanner sc = new Scanner(System.in);
+            int TU, SU, NTS;
+            System.out.println("enter the total users: ");
+            TU = sc.nextInt();
+
+            System.out.println("enter the student users: ");
+            SU = sc.nextInt();
+            if(TU<0||TU==0||TU<SU||TU==SU){
+                throw new ArithmeticException("invalid");
+            }
+            else {
+                NTS = SU / 3;
+                int studentuser = TU - SU - NTS;
+                System.out.println(studentuser);
+            }
+        }
+        catch (Exception e){
+            System.out.println("invalid");
+        }
+    }
+}

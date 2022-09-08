@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class Demonistration {
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n,m,o,p;
+        int sum1=0,sum2=0,sum3=0,sum4=0;
+        System.out.println("Enter the 1st denomination: ");
+        n=sc.nextInt();
+        if(n==2000||n==500||n==200||n==100){
+            System.out.println("Enter the no:of 1st denomination: ");
+            int a =sc.nextInt();
+            sum1=a*n;
+        }
+        else{
+            System.out.println("invalid");
+        }
+        System.out.println("Enter the 2nd denomination:  ");
+        m=sc.nextInt();
+        if(m==2000||m==500||m==200||m==100){
+            System.out.println("Enter the no:of 2nd denomination: ");
+            int b=sc.nextInt();
+             sum2=b*m;
+        }
+        System.out.println("Enter the 3rd denomination:  ");
+        o=sc.nextInt();
+        if(o==2000||o==500||o==200||o==100){
+            System.out.println("Enter the no:of 3rd denomination: ");
+            int c=sc.nextInt();
+            sum3=c*o;
+
+        }
+        System.out.println("Enter the 4rth denomination:  ");
+        p=sc.nextInt();
+        if(p==2000||p==500||p==200||p==100){
+            System.out.println("Enter the no:of 4rth denomination: ");
+            int d=sc.nextInt();
+            sum4=d*p;
+        }int total=0;
+        total = sum1 + sum2 + sum3 + sum4;
+        System.out.println(sum1);
+        System.out.println(sum2);
+        System.out.println(sum3);
+        System.out.println(sum4);
+        System.out.println("total is "+total);
+
+
+
+
+
+    }
+}

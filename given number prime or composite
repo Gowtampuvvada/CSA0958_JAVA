@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class pnc {
+    public static void main(String[] args) {
+        int sum = 0, r;
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        for (int i = 2; i < a; i++) {
+            if (a % i == 0) {
+                sum = sum + 1;
+            }
+            if (sum == 0) {
+                System.out.println("given number is prime");
+            }
+            else {
+                System.out.println("given number is composite");
+            }
+
+
+        }
+
+    }
+}

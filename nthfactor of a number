@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class secondquestion {
+    public static void main(String[] args) {
+
+            Scanner sc = new Scanner(System.in);
+            int a;
+            System.out.println("enter a number: ");
+            a = sc.nextInt();
+            System.out.println("enter factor: ");
+            int n = sc.nextInt();
+            int count = 0;
+            for (int i = 1; i <= a; i++) {
+
+                if (a % i == 0) {
+                    System.out.println(i);
+                    count = count + 1;
+
+                    if (count == n) {
+                        System.out.println(n + "th factor is" + i);
+                    }
+
+                }
+
+
+            }
+        if (count <= n) {
+            System.out.println("invalid due to excepeted the imaginary factor");
+        }
+
+            System.out.println("no:of factors is:" + count);
+
+
+    }
+
+}
